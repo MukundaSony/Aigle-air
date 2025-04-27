@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Device Control</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #4e54c8, #8f94fb);
+            color: white;
+            text-align: center;
+            padding-top: 50px;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+
+        h2 {
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .button-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        button {
+            padding: 20px 40px;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            min-width: 150px;
+        }
+
+        button:hover {
+            transform: translateY(-5px);
+        }
+
+        #fan, #light1, #light2, #pump, #heat_sink {
+            background-color: red;
+            color: white;
+        }
+
+    </style>
+
+    </style>
+</head>
+<body>
+    <h2>Control Panel</h2>
+
+    <button id="fan" onclick="toggleDevice('fan')">Fan</button>
+    <button id="light1" onclick="toggleDevice('light1')">Light 1</button>
+    <button id="light2" onclick="toggleDevice('light2')">Light 2</button>
+    <button id="pump" onclick="toggleDevice('pump')">Pump</button>
+    <button id="heat_sink" onclick="toggleDevice('heat_sink')">Heatsink</button>
+
+    <script>
+        // Store device states
+        const deviceState = {
+            fan: false,
+            light1: false,
+            light2: false,
+            pump: false,
+            heat_sink: false
+        };
+
+        // Toggle the state and send POST request
+        function toggleDevice(device) {
+            deviceState[device] = !deviceState[device];
+            sendPostRequest(device, deviceState[device]);
+            updateButton(device);
+        }
+
+        // Update button style based on state
+        function updateButton(device) {
+            const button = document.getElementById(device);
+            button.style.backgroundColor = deviceState[device] ? 'green' : 'red';
+        }
+
+        // Send POST request to localhost:5000/control
+        async function sendPostRequest(device, state) {
+            try {
+                const response = await fetch('http://localhost:5000/control', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ [device]: state })
+                });
+
+                const result = await response.json();
+                console.log('Response:', result);
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+
+        // Initialize button colors
+        Object.keys(deviceState).forEach(updateButton);
+    </script>
+</body>
+</html>
