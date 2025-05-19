@@ -1,4 +1,4 @@
-# 🌿 AIGLE Air – AI-Integrated Green Lung Extractor
+# 🌿 AIGLE Air
 
 AIGLE Air is a self-sustaining, AI-integrated bio-reactor system designed to purify air by capturing CO₂ and releasing oxygen using Spirulina algae. It harnesses solar power, real-time monitoring, and intelligent automation for optimal environmental impact.
 
