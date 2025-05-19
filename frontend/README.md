@@ -1,69 +1,91 @@
-# Welcome to your Lovable project
+# 🌿 AIGLE Air – AI-Integrated Green Lung Extractor
 
-## Project info
+AIGLE Air is a self-sustaining, AI-integrated bio-reactor system designed to purify air by capturing CO₂ and releasing oxygen using Spirulina algae. It harnesses solar power, real-time monitoring, and intelligent automation for optimal environmental impact.
 
-**URL**: https://lovable.dev/projects/f19a7d7b-2d32-48d4-8fd6-ba48a2a3a11c
+---
 
-## How can I edit this code?
+## 🔧 Core System Overview
 
-There are several ways of editing your application.
+### 1. CO₂ Capture & Diffusion
+- **Suction Motor** draws in ambient air.
+- **HEPA/BioMethus Filters** remove particulate matter (PM).
+- **Diffusion Plate** ensures even CO₂ distribution into the algae bio-reactor.
 
-**Use Lovable**
+### 2. Algae Bio-Reactor
+- **Spirulina Culture** absorbs CO₂ and emits O₂ through photosynthesis.
+- **Oxygen Valve** regulates O₂ release post-monitoring.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/f19a7d7b-2d32-48d4-8fd6-ba48a2a3a11c) and start prompting.
+### 3. Gas Monitoring & Efficiency
+- **O₂ & CO₂ Sensors** measure internal and external levels.
+- **Performance Metrics** calculated from algae growth and gas variations.
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## 📊 Sensor & Automation Suite
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- **pH Sensor** maintains acidity (base stick auto-injection).
+- **Turbidity Sensor** ensures water clarity.
+- **Temperature Sensors** monitor tank & environment.
+- **LDR Sensor** adjusts lighting based on sunlight.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## ☀️ Solar-Powered Automation
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+- **Solar Panels** power the entire system.
+- **Single-Axis Tracking** via LDRs and servo motors for maximum exposure.
+- **Battery Backup** for night-time operations.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+---
 
-# Step 3: Install the necessary dependencies.
-npm i
+## 💡 Lighting Control
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+- **LED Lights** supplement algae during low sunlight.
+- **Auto-Dimming** via LDR sensors.
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 🧠 Central Control Unit
 
-**Use GitHub Codespaces**
+- **Raspberry Pi + Arduino** manage:
+  - Sensors, aerators, heaters, pumps, solar panel movement.
+- **MongoDB** stores sensor data for analytics.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+---
 
-## What technologies are used for this project?
+## 🌐 Web Dashboard
 
-This project is built with .
+- **Technologies Used:** Flask, Node.js, Express.js.
+- **Features:**
+  - Real-time monitoring of CO₂/O₂ levels.
+  - Manual override of lights, pumps, and more.
+  - Visual insights and health diagnostics.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+---
 
-## How can I deploy this project?
+## 🤖 AI & Efficiency Monitoring
 
-Simply open [Lovable](https://lovable.dev/projects/f19a7d7b-2d32-48d4-8fd6-ba48a2a3a11c) and click on Share -> Publish.
+- **AI Models** predict contamination, performance drops, and optimize energy usage.
+- **Smart Alerts** for early issue detection.
 
-## I want to use a custom domain - is that possible?
+---
 
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+## 🚀 Future Enhancements
+
+- Auto **Algae Harvesting System**.
+- Advanced **AI for predictive maintenance**.
+- **Real-time AQI Display** & public awareness via LED screen.
+- **Ad & Crowdfunding Integration** on display board.
+
+---
+
+## 📦 Tech Stack
+
+- **Hardware:** Raspberry Pi, Arduino, Sensors, Solar Panels, LED System
+- **Software:** Python, Node.js, Flask, MongoDB, Express.js
+- **AI/ML:** Predictive Analysis, Optimization Models
+
+---
+
+> 💬 *AIGLE Air is more than just a purifier—it's a step toward a greener, smarter, and healthier future.*
+
