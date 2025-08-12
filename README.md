@@ -57,7 +57,7 @@ WebSite link :- https://mukundasony.github.io/Aigle-air/
 
 ## 🌐 Web Dashboard
 
-- **Technologies Used:** Flask, Node.js, Express.js.
+- **Technologies Used:** Node.js, Express.js.
 - **Features:**
   - Real-time monitoring of CO₂/O₂ levels.
   - Manual override of lights, pumps, and more.
